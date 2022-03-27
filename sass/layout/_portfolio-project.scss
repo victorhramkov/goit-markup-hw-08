@@ -1,0 +1,107 @@
+.project-list {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   list-style: none;
+   margin: 34px 0 0 0;
+
+   @media screen and (min-width: 768px) and (max-width: 1200px) {
+      justify-content: center;
+      &:last-child {
+         justify-content: start;
+      }
+   }
+}
+.container-items {
+   padding: 20px 24px 20px 24px;
+   border-bottom: 1px solid #eeeeee;
+   border-right: 1px solid #eeeeee;
+   border-left: 1px solid #eeeeee;
+}
+.project-list__item {
+   // width: 370px;
+   margin: 0 0 30px 0;
+   &:last-child {
+      margin-bottom: 0;
+   }
+   @media screen and (min-width: 768px) and (max-width: 1200px) {
+      width: 334px;
+      // height: 440px;
+      margin: 0 30px 30px 0;
+      &:nth-child(2n + 2) {
+         margin-right: 0;
+      }
+   }
+   @media screen and (min-width: 1200px) {
+      width: 370px;
+      height: 404px;
+      margin-right: 30px;
+      &:nth-child(3n + 3) {
+         margin-right: 0px;
+      }
+      &:nth-child(1n + 7) {
+         margin-bottom: 0;
+      }
+   }
+   // margin: 0 0 30px 30px;
+
+   // &:nth-child(3n + 1) {
+   //    margin: 0 0 30px 0;
+   // }
+}
+.projec-items {
+   padding-bottom: 94px;
+}
+.portfolio-img {
+   display: block;
+   @media screen and (min-width: 767px) {
+      width: 334px;
+      height: 294px;
+   }
+}
+.img-thumb__img {
+   max-width: 100%;
+   height: auto;
+}
+.img-thumb {
+   position: relative;
+   overflow: hidden;
+}
+.img-thumb__description {
+   font-family: Roboto;
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   background: rgba(33, 150, 243, 0.9);
+   transform: translateY(calc(100% + 1px));
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   font-size: 18px;
+   line-height: 1.55;
+   letter-spacing: 0.03em;
+   color: #ffffff;
+   padding: 40px 24px 0 24px;
+   .project-list__url:hover &,
+   .project-list__url:focus & {
+      transform: translateY(0);
+   }
+   @media screen and (min-width: 768px) and (max-width: 1200px) {
+      padding: 45px 24px 0 24px;
+      font-size: 18px;
+   }
+   @media screen and (min-width: 1200px) {
+      padding: 63px 24px 0 24px;
+      font-size: 18px;
+   }
+}
+
+.project-list__url {
+   display: block;
+   text-decoration: none;
+   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   &:hover,
+   &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+         0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+   }
+}
